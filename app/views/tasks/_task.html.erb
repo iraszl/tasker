@@ -1,5 +1,8 @@
-<div class="list-group-item d-flex justify-content-between" data-controller="task">
-  <div class="custom-control custom-checkbox">
+<div class="list-group-item d-flex <%= 'completed' if task.complete? %>" data-controller="task" data-id="<%= task.id %>">
+  <% unless task.complete? %>
+    <div class="mr-3"><i class="fa fa-grip-vertical text-muted"></i></div>
+  <% end %>
+  <div class="custom-control custom-checkbox mr-2">
     <input type="checkbox" class="custom-control-input" id="<%= dom_id(task) %>" data-reflex="change->task#toggle" data-id="<%= task.id %>" <%= 'checked' if task.complete? %>>
     <label for="<%= dom_id(task) %>" class="custom-control-label">
       <% if task.complete? %>
@@ -11,7 +14,7 @@
       <% end %>
     </label>
   </div>
-  <div>
+  <div class="ml-auto">
     <a href="" data-action="click->task#destroy" data-id="<%= task.id %>">
       <i class="fa fa-times text-danger"></i>
     </a>

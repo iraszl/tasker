@@ -58,3 +58,5 @@ gem "stimulus_reflex", "~> 3.4"
 
 gem "faker", "~> 2.20"
 gem "bootstrap_form", "~> 5.0"
+
+gem "acts_as_list", "~> 1.0"
