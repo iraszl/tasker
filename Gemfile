@@ -57,3 +57,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "stimulus_reflex", "~> 3.4"
 
 gem "faker", "~> 2.20"
+gem "bootstrap_form", "~> 5.0"
